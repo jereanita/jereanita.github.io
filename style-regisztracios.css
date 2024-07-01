@@ -1,0 +1,233 @@
+*{
+	padding:0;
+	margin:0;
+	
+}
+.header{
+	min-height: 5vh;
+	width: 100%;
+    background-color: rgba(12, 76, 150, 0.865);
+	opacity: 0.9;
+	/*background-size: cover; rgba(69, 180, 235, 0.602); rgba(7, 98, 143, 0.751)*/
+	background-position:center;
+	position:relative;
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 40px;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	color:aliceblue;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: serif;
+}
+/*.nav-links ul li::after{
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color:rgba(161, 228, 240, 0.503) ;
+	/*display: block;
+	margin: auto;
+}*/
+
+.nav-links ul li:hover{
+	background:rgba(240, 240, 240, 0.303);
+	border-radius:15px;
+	transform: scale(1) translateY(-5%);
+	transition: 0.5s;
+	/*width:30%;
+	transition: width 0.3s ease-in-out;*/
+}
+
+.text-box{
+	width: 90%;
+	color:azure;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.text-box h1{
+	font-size: 45px;
+	font-family: serif;
+}
+
+
+nav .fa {   /*elrejti az ikonokat ha az oldalmerete teljes*/
+	display: none;
+}
+
+/*----------------------------------------------------------------------------------*/
+.regi{
+    /* background-color: rgba(12, 76, 150, 0.865); */
+	background-color: rgba(223, 235, 248, 0.865);
+    min-height: 100vh;
+	width: 100%;
+    opacity: 0.9;
+}
+
+.container{
+    width: 100vw;
+    max-width: 600px;
+    padding: 2em 1.5em;
+    background-color: aliceblue;
+    margin: 0em auto;
+    border-radius: 0.5em;
+	font-family: "Poppins",sans-serif;
+}
+
+.option{
+    /*position: relative;*/
+    /*left:100px;
+    top:-37px;*/
+    line-height: 40px;
+    width: 615px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0 14px;
+    font-size: 16px;
+    color:rgb(0, 0, 0);
+    outline: none;
+    overflow: hidden;
+}
+.option option{
+    font-size: 20px;
+}
+/*
+.option{
+	width: 100vw;
+    max-width: 600px;
+	margin-top: 30px;
+    padding: 2em 1.5em;
+    background-color: rgb(133, 176, 196);
+    margin: 0em auto;
+    border-radius: 0.5em;
+	font-family: "Poppins",sans-serif;
+	font-size: 14px;
+}*/
+h4{
+    font-size: 1.5rem;
+}
+
+.inpit-section{
+    margin: 0.5em 0;
+}
+
+label, .error-message{
+    display: block;
+    font-size: 1em;
+}
+
+label{
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+
+.error-message{
+    margin-top: 0.2em;
+}
+input,button{
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+input{
+    padding: 1em 0.5em;
+    border: 1.5px solid rgba(138, 138, 141, 0.862);
+}
+button{
+    font-size: 1em;
+    background-color: rgba(12, 76, 150, 0.865);
+    border: none;
+    color: aliceblue;
+    padding: 0.8em 0;
+	width: 80%;
+	display:block;
+	margin: 0 auto;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+
+.reguired-color{
+    color: rgb(234, 63, 57);
+}
+.error{
+    border-color: rgb(230, 27, 16);
+}
+.valid{
+    border-color: rgb(34, 175, 246);
+}
+.hide{
+    display: none;
+}
+
+
+@media only screen and (max-width:670){
+    .container{
+        font-size: 14px;
+    }
+}
+
+
+
+
+@media(max-width: 670px){ /* csokkentett oldalmerete*/
+	.text-box h1{
+		font-size: 25px;
+	}
+	.nav-links ul li{
+		display: block;
+	}
+	.nav-links{
+		position: absolute;
+		background-color:rgba(139, 189, 233, 0.826) ;
+		height: 100vh;
+		width: -200px;
+		top:0;
+		right: 0px;
+		text-align: center;
+		z-index: 2; /*eloterbe kerul azoknal melyeknek kisebb az index ertekuk*/
+		transition: 1s;
+	}
+
+	nav .fa{
+		display: block;/*
+		position: absolute;
+		top: 10px;  
+		left: 150px;  */
+		color: rgb(231, 240, 240);
+		margin: 10px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	.nav-links ul{  
+		padding: 25px; /*terkoz */
+	}
+	.header img {
+		display: none;
+	  }
+	#demo {
+		font-size: 14px;
+	  }
+}

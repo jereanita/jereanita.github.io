@@ -1,0 +1,314 @@
+*{
+	padding:0;
+	margin:0;
+	font-family: 'Open sans', sans-serif;
+}
+.header{
+	min-height: 100vh;
+	width: 100%;
+	/* background-image: url(flat-lay-notebook-assortment.jpg); */
+	/* background-image: url(hatter1.jpg); */
+	opacity: 0.9;
+	background-size: cover;
+	background-position:center;
+	position:relative;
+}
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 40px;
+}
+.nav-links{
+	flex: 1;
+	text-align: right;
+
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	color:aliceblue;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: serif;
+}
+/*.nav-links ul li::after{
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color:rgba(161, 228, 240, 0.503) ;
+	/*display: block;
+	margin: auto;
+}*/
+
+.nav-links ul li:hover{
+	background:rgba(240, 240, 240, 0.303);
+	border-radius:15px;
+	transform: scale(1) translateY(-5%);
+	transition: 0.5s;
+	/*width:30%;
+	transition: width 0.3s ease-in-out;*/
+}
+
+.text-box{
+	width: 90%;
+	color:azure;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.text-box h1{
+	font-size: 45px;
+	font-family: serif;
+}
+
+
+nav .fa {   /*elrejti az ikonokat ha az oldalmerete teljes*/
+	display: none;
+}
+
+/*------------------------------VISSZASZAMLALO-----------------------------------------------*/
+#demo {
+	color: rgb(248, 245, 245);
+	font-family: serif;
+	font-size: 28px;
+  }
+
+  
+@media(max-width: 670px){ /* csokkentett oldalmerete*/
+	.text-box h1{
+		font-size: 33px;
+	}
+	.text-box h2{
+		font-size: 28px;
+	}
+	.nav-links ul li{
+		display: block;
+		color: azure;
+	}
+	.nav-links{
+		position: absolute;
+		background-color:rgba(139, 189, 233, 0.826) ;
+		height: 100vh;
+		width: -200px;
+		top:0;
+		right: 0px;
+		text-align: center;
+		z-index: 2; /*eloterbe kerul azoknal melyeknek kisebb az index ertekuk*/
+		transition: 1s;
+	}
+
+	nav .fa{
+		display: block;/*
+		position: absolute;
+		top: 10px;  
+		left: 150px;  */
+		color: rgb(8, 136, 241);
+		margin: 10px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	.nav-links ul{  
+		padding: 25px; /*terkoz */
+	}
+	.header img {
+		display: none;
+	  }
+	#demo {
+		font-size: 20px;
+	  }
+}
+
+
+h2{
+	font-family: serif;
+	font-size: 32px;
+}
+/*---------------------------------------------------------------------------------------*/
+
+.heading-title{
+	text-align: center;
+	margin-bottom: 4rem;
+	margin-top: 3rem;
+	font-size: 1 rem;
+	font-weight: 100px;
+	text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* állítsd be a megfelelő árnyékeffektust */
+	margin-bottom: 50px;
+
+}
+.services .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem,1fr));
+	gap:4rem;
+}
+ 
+.services .box-container .box{
+	padding: 1rem 0rem;
+	text-align: center;
+	background-color: aliceblue;
+	max-width: 15rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+.services .box-container .box:hover{
+	box-shadow: 0 0 20px 0px rgba(4, 6, 78, 0.165);
+}
+
+.services .box-container .box:hover{
+	background-color: rgba(85, 200, 218, 0.164);
+}
+
+.services .box-container .box img{
+	height: 4rem;
+	padding-bottom: 1rem;
+}
+
+.services .box-container .box p{
+	color:rgb(13, 12, 13);
+	padding-top: 1rem;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+}
+@media(max-width: 670px){
+	.services .box-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.services .box-container .box{
+		max-width: 10rem;
+		max-height: 8rem;
+		margin: 0 auto;
+	  }
+	  .services .box-container .box p{
+		font-size: 10px;
+	font-weight: 600;
+	  }
+	  .services .box-container .box img{
+		height: 3rem;
+		padding-bottom: 1rem;
+	}
+}
+
+/*-----------------------------WHY------------------------------------------*/
+.why {
+	font-family: serif;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+	
+}
+
+.why h1{
+	font-size: 25px;
+	font-weight: 600;
+	text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); /* állítsd be a megfelelő árnyékeffektust */
+	margin-bottom: 50px;
+}
+
+.why p{
+	color:rgb(5, 5, 7);
+	line-height: 1.5;
+    margin-bottom: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+
+.btn button {
+	text-decoration: none;
+	text-shadow: 0cap;
+	/*color: rgba(39, 126, 179, 0.589);*/
+	border: 1px solid #3550d7;
+	border-radius: 12px;
+	padding: 16px 34px;
+	/*background: transparent;*/
+	background-color: rgba(129, 196, 244, 0.14);
+	position: relative;
+	cursor: pointer;
+	opacity: 0.8; 
+  	transition: opacity 0.3s ease-in-out;
+	
+}
+
+.btn button:hover {
+	opacity: 1;
+	background-color: rgba(129, 196, 244, 0.321);
+}
+
+hr {
+	border: none;
+	border-top: 2px solid rgb(41, 116, 229); /* ad egy 3px széles, kék színű vonalat az elem tetejéhez */
+	margin: 1px auto 10px; /* hozzáad margót az elem tetejéhez és aljához */
+	margin-top: 0px;
+	width: 41%;
+	display: block;
+	
+}
+
+/*---------------------------FOOTER--------------------------------------------*/
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 3px 0;
+	background-color: rgba(130, 172, 217, 0.185);
+	font-size: 0.91rem;
+}
+
+.footer .footer-header{
+	display: inline-block;
+}
+
+.footer .h4{
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+}
+.footer img{
+	width: 2rem;
+	height: 2rem;
+    /*margin-right: 1rem;*/
+}
+.contact i{
+	margin-right: 12px;
+}
+.contact p{
+	margin-bottom: 10px;
+}
+
+.social-media-icons .fa{
+	padding: 1px 0;
+	margin: 0 12px;	
+}
+
+/*----------------------------------------TEMAKOROK---------------------------------------------*/ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
